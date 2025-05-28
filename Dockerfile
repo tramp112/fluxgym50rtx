@@ -1,5 +1,5 @@
-# Base image with CUDA 12.2
-FROM nvidia/cuda:12.2.2-base-ubuntu22.04
+# Base image with CUDA 12.8
+FROM nvidia/cuda:12.8.0-base-ubuntu20.04
 
 # Install pip if not already installed
 RUN apt-get update -y && apt-get install -y \
