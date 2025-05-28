@@ -28,7 +28,7 @@ RUN git clone -b sd3 https://github.com/kohya-ss/sd-scripts && \
 COPY ./requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r ./requirements.txt
 
-# Install Torch, Torchvision, and Torchaudio for CUDA 12.2
+# Install Torch, Torchvision, and Torchaudio for CUDA 12.8
 #RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu122/torch_stable.html
 RUN pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 RUN pip install -U bitsandbytes
