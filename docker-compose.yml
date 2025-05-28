@@ -1,5 +1,3 @@
-services:
-
   fluxgym:
     build:
       context: .
@@ -15,7 +13,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - ./:/app/fluxgym
+      - /mnt/user/appdata/fluxgym50rtx/:/app/fluxgym
     stop_signal: SIGKILL
     tty: true
     deploy:
@@ -23,6 +21,6 @@ services:
         reservations:
           devices:
           - driver: nvidia
-            count: all
+            device_ids: ['YOUR_GPU_ID'] # Specify your GPU ID here (e.g., ['0'])
             capabilities: [gpu]
     restart: unless-stopped
