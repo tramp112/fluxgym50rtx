@@ -1,3 +1,9 @@
+# Updates for it to work on UNRAID - Hope this helps others with the 5090 within unraid
+1. updated docker file and compose (required python 3.10 install, user updates, timezone removal, add of RUN command for nightly/ bit.bites) 
+2. ran command using terminal in unraid after navigating to the folder and ran this commmand: docker-compose up --build -d
+3. then using  http://localhost:7860/ you are good to go!
+
+
 # Flux Gym
 
 Dead simple web UI for training FLUX LoRA **with LOW VRAM (12GB/16GB/20GB) support.**
